@@ -14,7 +14,7 @@
 
 ## 功能特性
 
-技术栈：**vue3 全家桶**+**element-plus**+**mockjs**+**axios**+**eChart5**
+技术栈：**vue3 **+**vite**+**vuex**+**vue-router**+**element-plus**+**mockjs**+**axios**+**eChart5**
 
 - 脱离后端自主开发测试
 - **axios**深度封装
@@ -25,7 +25,7 @@
 
 - Node.js：v16.15.0
 - Vue：3.2.37
-- vie：3.1.0
+- vite：3.1.0
 - vuex：4.1.0
 
 ## 部署步骤
