@@ -14,7 +14,7 @@
 
 ## 功能特性
 
-技术栈：**vue3 **+**vite**+**vuex**+**vue-router**+**element-plus**+**mockjs**+**axios**+**eChart5**
+技术栈：**vue3**+**vite**+**vuex**+**vue-router**+**element-plus**+**mockjs**+**axios**+**eChart5**
 
 - 脱离后端自主开发测试
 - **axios**深度封装
