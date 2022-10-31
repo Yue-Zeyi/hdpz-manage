@@ -2,13 +2,13 @@
   <el-aside :width="$store.state.isCollapse ? '200px' : '64px'">
     <el-menu
       class="el-menu-vertical-demo"
-      background-color="#303133"
+      background-color="#000"
       text-color="#fff"
       :collapse="!$store.state.isCollapse"
       :collapse-transition="false"
     >
       <span v-show="$store.state.isCollapse">
-        <img src="../assets/images/logo.png" alt="" srcset="" />
+        <img src="../assets/images/logo.png" style="width: 200px; height: 60px" />
       </span>
       <h3 v-show="!$store.state.isCollapse">
         <el-icon><Monitor /></el-icon>
@@ -47,65 +47,6 @@ import { useStore } from 'vuex';
 export default {
   setup() {
     const store = useStore();
-    const list = [
-      {
-        path: '/user',
-        name: 'user',
-        label: '用户管理',
-        icon: 'user',
-        url: 'UserManage/UserManage',
-      },
-      {
-        path: '/sort',
-        name: 'sort',
-        label: '分类管理',
-        icon: 'Menu',
-        url: 'SortManage/SortManage',
-      },
-      {
-        path: '/goods',
-        name: 'goods',
-        label: '商品管理',
-        icon: 'Goods',
-        url: 'GoodsManage/GoodsManage',
-      },
-      {
-        path: '/order',
-        name: 'order',
-        label: '订单管理',
-        icon: 'List',
-        url: 'OrderManage/OrderManage',
-      },
-      {
-        path: '/article',
-        name: 'article',
-        label: '文章管理',
-        icon: 'List',
-        url: 'ArticleManage/ArticleManage',
-      },
-      {
-        label: '系统设置',
-        icon: 'location',
-        path: '/other',
-        icon: 'Tools',
-        children: [
-          {
-            path: '/system/base',
-            name: 'base',
-            label: '基础配置',
-            icon: 'setting',
-            url: 'System/PayManage',
-          },
-          {
-            path: '/system/pay',
-            name: 'pay',
-            label: '支付配置',
-            icon: 'setting',
-            url: 'System/BaseManage',
-          },
-        ],
-      },
-    ];
     const router = useRouter();
     const noChildren = () => {
       return asyncList.filter((item) => !item.children);
@@ -121,6 +62,7 @@ export default {
       // vuex来管理
       store.commit('selectMenu', item);
     };
+
     return {
       noChildren,
       hasChildren,
@@ -135,11 +77,10 @@ export default {
   width: 18px;
   height: 18px;
 }
+
 .el-menu {
   border-right: none;
-  span {
-    height: 56px;
-  }
+
   h3 {
     line-height: 56px;
     color: #fff;

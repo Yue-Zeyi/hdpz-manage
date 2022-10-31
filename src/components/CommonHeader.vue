@@ -2,7 +2,7 @@
   <el-header>
     <div class="l-content">
       <el-button size="small" plain @click="handleCollapse">
-        <el-icon size="20"> <Menu /> </el-icon> </el-button
+        <el-icon size="20"> <Fold /></el-icon> </el-button
       >&nbsp;
       <el-breadcrumb separator="/" class="bread">
         <!-- 首页是一定存在的，所以直接写死 -->
@@ -11,7 +11,6 @@
           current.label
         }}</el-breadcrumb-item>
       </el-breadcrumb>
-      <!-- <div><CommonTab /></div> -->
     </div>
     <div class="r-content">
       <el-dropdown>
@@ -20,7 +19,7 @@
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>个人中心</el-dropdown-item>
+            <el-dropdown-item @click="goCenter">个人中心</el-dropdown-item>
             <el-dropdown-item @click="handleLoginOut">退出</el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -32,9 +31,10 @@
 <script>
 import { computed } from '@vue/reactivity';
 import { useRouter } from 'vue-router';
+import { defineComponent } from 'vue';
 import { useStore } from 'vuex';
 import CommonTab from '../components/CommonTab.vue';
-export default {
+export default defineComponent({
   setup() {
     let store = useStore();
     // const imgSrc = require('../assets/images/user-default.png');
@@ -51,23 +51,31 @@ export default {
     const router = useRouter();
     const handleLoginOut = () => {
       store.commit('cleanMenu');
-
       router.push({
         name: 'login',
       });
-      store.commit('clearToken');
+      ElMessage({
+        message: '你已成功退出登录.',
+        type: 'warning',
+      });
+    };
+    const goCenter = () => {
+      router.push({
+        name: 'usercenter',
+      });
     };
     return {
       getImgSrc,
       handleCollapse,
       current,
       handleLoginOut,
+      goCenter,
     };
   },
   components: {
     CommonTab,
   },
-};
+});
 </script>
 
 <style lang="less" scoped>
@@ -76,7 +84,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #333;
+  background: #fff;
 }
 .r-content {
   .user {
@@ -92,11 +100,11 @@ header {
     margin-right: 20px;
   }
   h3 {
-    color: #fff;
+    color: #333;
   }
 }
 :deep(.bread span) {
-  color: #fff !important;
+  color: #333 !important;
   cursor: pointer !important;
 }
 </style>

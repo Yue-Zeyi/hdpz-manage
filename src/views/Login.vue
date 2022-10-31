@@ -36,8 +36,14 @@ export default {
       store.commit('setMenu', res.menu);
       store.commit('addMenu', router);
       store.commit('setToken', res.token);
+      // 获取登录的用户名并保存到vuex
+      store.commit('getusername', loginForm.username);
       router.push({
         name: 'home',
+      });
+      ElMessage({
+        message: '登录成功',
+        type: 'success',
       });
     };
     return { loginForm, login };

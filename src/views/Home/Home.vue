@@ -5,8 +5,9 @@
         <div class="user">
           <img src="../../assets/images/user.png" alt="" />
           <div class="user-info">
-            <h3 class="name">Admin</h3>
-            <p class="role">超级管理员</p>
+            <h3 class="name">{{ $store.state.username }}</h3>
+            <p class="role" v-if="$store.state.username === 'admin'">超级管理员</p>
+            <p class="role" v-else>公司员工</p>
           </div>
         </div>
         <div class="login-info">
@@ -69,6 +70,7 @@ export default defineComponent({
     const getCountData = async () => {
       let res = await proxy.$api.getCountData();
       countData.value = res;
+      console.log(res);
     };
     onMounted(() => {
       getTableList();

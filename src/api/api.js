@@ -74,4 +74,11 @@ export default {
       data: params,
     });
   },
+  getGoodsData() {
+    return request({
+      url: '/goods/goodsData',
+      method: 'get',
+      mock: true,
+    });
+  },
 };

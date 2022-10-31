@@ -28,6 +28,7 @@ export default {
         name: item.name,
       });
     };
+
     const handleClose = (tag, index) => {
       let length = tags.length - 1;
       // 处理vuex中的tabslist
@@ -59,6 +60,7 @@ export default {
 .tags {
   padding-left: 20px;
   padding-top: 20px;
+  padding-bottom: 10px;
   width: 100%;
   .el-tag {
     margin-right: 15px;

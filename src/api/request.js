@@ -22,6 +22,8 @@ service.interceptors.response.use((res) => {
   //   根据后端协商 视情况而定
   if (code == 200) {
     return data;
+  } else if (code == 999) {
+    ElMessage.error('账号密码错误，请重新输入！');
   } else {
     // 网络请求错误提示
     ElMessage.error(msg || NETWORK_ERROR);

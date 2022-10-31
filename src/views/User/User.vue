@@ -6,7 +6,7 @@
         <el-input v-model="formInline.keyword" placeholder="请输入用户名" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="handleSerach">搜素</el-button>
+        <el-button type="primary" @click="handleSerach">搜索</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -340,15 +340,16 @@ export default defineComponent({
 <style lang="less" scoped>
 .table {
   position: relative;
-  height: 520px;
+  height: 528px;
   .pager {
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -12px;
   }
 }
 .user-header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--el-border-color);
 }
 </style>

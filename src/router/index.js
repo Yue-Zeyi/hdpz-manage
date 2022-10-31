@@ -49,7 +49,13 @@ const router = createRouter({
       //   },
       // ],
 
-      children: [],
+      children: [
+        {
+          path: '/user/usercenter',
+          name: 'usercenter',
+          component: () => import('../views/User/UserCenter.vue'),
+        },
+      ],
     },
     {
       path: '/login',

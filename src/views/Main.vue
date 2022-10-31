@@ -28,6 +28,11 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+.el-main {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 20px 0px 20px;
+}
 .el-container {
   flex-wrap: wrap;
   align-items: flex-start;
@@ -41,7 +46,7 @@ export default defineComponent({
     height: 100%;
     & > .el-aside {
       height: 120%;
-      background: #333;
+      background: #000;
     }
   }
 }

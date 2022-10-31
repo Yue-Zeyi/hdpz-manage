@@ -24,6 +24,8 @@ function checkRouter(path) {
   }
 }
 store.commit('addMenu', router);
+// 获取登录的用户名并保存到vuex
+
 router.beforeEach((to, from, next) => {
   store.commit('getToken');
   const token = store.state.token;

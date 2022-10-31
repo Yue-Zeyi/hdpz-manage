@@ -9,8 +9,13 @@ export default createStore({
     tabsList: [{ path: '/', name: 'home', label: '首页', icon: 'home' }],
     menu: [],
     token: '',
+    username: localStorage.getItem('username'),
   },
   mutations: {
+    getusername(state, username) {
+      state.username = username;
+      localStorage.setItem('username', username);
+    },
     updataIsCollapse(state, payload) {
       state.isCollapse = !state.isCollapse;
     },
@@ -68,7 +73,7 @@ export default createStore({
       state.token = val;
       Cookie.set('token', val);
     },
-    clearToken() {},
+
     getToken(state) {
       state.token = state.token || Cookie.get('token');
     },

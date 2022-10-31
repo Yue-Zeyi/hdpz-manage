@@ -54,8 +54,8 @@ export default {
             {
               label: '系统设置',
               icon: 'location',
-              path: '/other',
-              icon: 'Tools',
+              path: '/system',
+              url: 'System',
               children: [
                 {
                   path: '/system/base',
@@ -78,7 +78,7 @@ export default {
           message: '获取成功',
         },
       };
-    } else if (username === 'xiaoxiao' && password === 'xiaoxiao') {
+    } else if (username !== 'admin') {
       return {
         code: 200,
         data: {
@@ -118,7 +118,7 @@ export default {
       };
     } else {
       return {
-        code: -999,
+        code: 999,
         data: {
           message: '密码错误',
         },
