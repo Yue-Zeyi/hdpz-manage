@@ -1,25 +1,38 @@
 # 好店铺子管理系统
 
-## 项目简介
+Vue3 + Vite + Vuex + Vue-Router + Element-Plus + Echarts + Axios + mockJs 后台管理系统。
 
-基于 vue3 和 element-plus 开发的电商后台管理系统。
+本项目是一套基于 vue3 和 element-plus 开发的后台管理系统，包含数据面板、用户管理、分类管理、商品管理、订单管理、设置等模块。
 
-![image-20221030202430634](https://pic.zeyiwl.cn/yunimg/20221030202431.png)
+## 项目预览
 
-![image-20221030202508898](https://pic.zeyiwl.cn/yunimg/20221030202509.png)
+![](https://pic.zeyiwl.cn/yunimg/20221030202431.png)
 
-![image-20221030202533913](https://pic.zeyiwl.cn/yunimg/20221030202534.png)
+![](https://pic.zeyiwl.cn/yunimg/20221030202509.png)
 
-![image-20221030202620594](https://pic.zeyiwl.cn/yunimg/20221030202620.png)
+![](https://pic.zeyiwl.cn/yunimg/20221031225949.png)
+
+![](https://pic.zeyiwl.cn/yunimg/20221030202534.png)
+
+![](https://pic.zeyiwl.cn/yunimg/20221030202620.png)
+
+![](https://pic.zeyiwl.cn/yunimg/20221031205604.png)
+
+![](https://pic.zeyiwl.cn/yunimg/20221031225710.png)
+
+![](https://pic.zeyiwl.cn/yunimg/20221031225849.png)
+
+目前就这么多页面了，后续又空再加。
 
 ## 功能特性
 
-技术栈：**vue3**+**vite**+**vuex**+**vue-router**+**element-plus**+**mockjs**+**axios**+**eChart5**
-
 - 脱离后端自主开发测试
+- mockJS 数据模拟
 - **axios**深度封装
 - 动态路由配置
-- mockJS 模拟数据
+- 面包屑、标签栏
+- 多用户权限登录
+- 分类及商品分级
 
 ## 环境依赖
 
@@ -44,7 +57,8 @@ npm run dev
 
 ## 目录结构
 
-```bash
+```
+hdpz-manage
 ├─ .gitignore
 ├─ index.html
 ├─ package-lock.json
@@ -102,6 +116,8 @@ npm run dev
 │     │  ├─ Base.vue
 │     │  └─ Pay.vue
 │     └─ User
-│        └─ User.vue
+│        ├─ User.vue
+│        └─ UserCenter.vue
 └─ vite.config.js
+
 ```
