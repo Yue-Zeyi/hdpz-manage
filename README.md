@@ -1,8 +1,8 @@
-# 好店铺子管理系统
+# 商城后台管理系统
 
 Vue3 + Vite + Vuex + Vue-Router + Element-Plus + Echarts + Axios + mockJs 后台管理系统。
 
-本项目是一套基于 vue3 和 element-plus 开发的后台管理系统，包含数据面板、用户管理、分类管理、商品管理、订单管理、设置等模块。
+本系统是一套基于 vue3 和 element-plus 开发的商城后台管理系统，包含数据面板、用户管理、分类管理、商品管理、订单管理、设置等模块，利用 mockjs 模拟数据脱离后端自主开发测试，对 axios 进行深度封装，集成了菜单、面包屑导航、标签栏的动态路由切换，分类及商品的二次渲染，利用导航守卫结合 Token 进行登录验证并根据用户权限不同展示对应功能。
 
 ## 项目预览
 
@@ -22,8 +22,6 @@ Vue3 + Vite + Vuex + Vue-Router + Element-Plus + Echarts + Axios + mockJs 后台
 
 ![](https://pic.zeyiwl.cn/yunimg/20221031225849.png)
 
-目前就这么多页面了，后续又空再加。
-
 ## 功能特性
 
 - 脱离后端自主开发测试
@@ -31,8 +29,9 @@ Vue3 + Vite + Vuex + Vue-Router + Element-Plus + Echarts + Axios + mockJs 后台
 - **axios**深度封装
 - 动态路由配置
 - 面包屑、标签栏
-- 多用户权限登录
+- 用户权限的判断
 - 分类及商品分级
+- Token 登录验证
 
 ## 环境依赖
 
